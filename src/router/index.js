@@ -21,6 +21,21 @@ const routes = [
     path: '/torefs',
     name: 'ToRefs',
     component: () => import('../views/ToRefs.vue')
+  },
+  {
+    path: '/computed',
+    name: 'Computed',
+    component: () => import('../views/Computed.vue')
+  },
+  {
+    path: '/watcheffect',
+    name: 'WatchEffect',
+    component: () => import('../views/WatchEffect.vue')
+  },
+  {
+    path: '/watch',
+    name: 'Watch',
+    component: () => import('../views/Watch.vue')
   }
 ]
 
