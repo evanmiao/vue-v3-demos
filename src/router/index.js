@@ -36,6 +36,11 @@ const routes = [
     path: '/watch',
     name: 'Watch',
     component: () => import('../views/Watch.vue')
+  },
+  {
+    path: '/lifecyclehooks',
+    name: 'LifecycleHooks',
+    component: () => import('../views/LifecycleHooks.vue')
   }
 ]
 
