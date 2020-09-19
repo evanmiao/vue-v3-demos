@@ -41,6 +41,11 @@ const routes = [
     path: '/lifecyclehooks',
     name: 'LifecycleHooks',
     component: () => import('../views/LifecycleHooks.vue')
+  },
+  {
+    path: '/templaterefs',
+    name: 'TemplateRefs',
+    component: () => import('../views/TemplateRefs.vue')
   }
 ]
 
