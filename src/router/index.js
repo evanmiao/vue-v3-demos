@@ -46,6 +46,11 @@ const routes = [
     path: '/templaterefs',
     name: 'TemplateRefs',
     component: () => import('../views/TemplateRefs.vue')
+  },
+  {
+    path: '/slot',
+    name: 'Slot',
+    component: () => import('../views/Slot/Slot.vue')
   }
 ]
 
