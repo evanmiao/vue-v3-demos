@@ -51,6 +51,11 @@ const routes = [
     path: '/slot',
     name: 'Slot',
     component: () => import('../views/Slot/Slot.vue')
+  },
+  {
+    path: '/propemit',
+    name: 'PropEmit',
+    component: () => import('../views/PropEmit/PropEmit.vue')
   }
 ]
 
