@@ -56,6 +56,11 @@ const routes = [
     path: '/propemit',
     name: 'PropEmit',
     component: () => import('../views/PropEmit/PropEmit.vue')
+  },
+  {
+    path: '/provideinject',
+    name: 'ProvideInject',
+    component: () => import('../views/ProvideInject/ProvideInject.vue')
   }
 ]
 
