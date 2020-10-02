@@ -61,6 +61,29 @@ const routes = [
     path: '/provideinject',
     name: 'ProvideInject',
     component: () => import('../views/ProvideInject/ProvideInject.vue')
+  },
+  {
+    path: '/routeProp',
+    name: 'RouteProp',
+    component: () => import('../views/RouteProp/RouteProp.vue'),
+    redirect: {
+      name: 'RoutePropChild1'
+    },
+    children: [{
+      path: 'child1',
+      name: 'RoutePropChild1',
+      component: () => import('../views/RouteProp/components/Child1.vue'),
+      props: route => ({
+        query: route.query
+      })
+    }, {
+      path: 'child2/:paramID',
+      name: 'RoutePropChild2',
+      component: () => import('../views/RouteProp/components/Child2.vue'),
+      props: route => ({
+        params: route.params
+      })
+    }]
   }
 ]
 
