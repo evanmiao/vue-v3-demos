@@ -84,6 +84,11 @@ const routes = [
         params: route.params
       })
     }]
+  },
+  {
+    path: '/:catchAll(.*)',
+    name: 'All',
+    component: Setup
   }
 ]
 

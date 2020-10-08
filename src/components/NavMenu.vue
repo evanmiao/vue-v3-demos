@@ -15,7 +15,8 @@ export default {
     const links = []
 
     routes.forEach(route => {
-      if (route.path.includes('/', 1)) return  // 二级路由
+      // 不包含二级路由、通配符路由
+      if (route.path.includes('/', 1) || route.path === '/:catchAll(.*)') return
       links.push({
         name: route.name,
         link: route.path
@@ -38,7 +39,7 @@ export default {
   color: #2c3e50;
 }
 
-#nav a.router-link-exact-active {
+#nav a.router-link-active {
   color: #42b983;
 }
 </style>

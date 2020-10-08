@@ -12,8 +12,24 @@
 </template>
 
 <script>
+import { ref, onActivated } from 'vue'
+import { useRoute, useRouter, onBeforeRouteLeave } from 'vue-router'
+
 export default {
   setup() {
+    const route = useRoute()
+    const router = useRouter()
+    const currentPath = ref(null)
+
+    onActivated(() => {
+      if (currentPath.value && currentPath.value != route.fullPath) router.push(currentPath.value)
+    })
+
+    onBeforeRouteLeave((to, from, next) => {
+      currentPath.value = route.fullPath
+      next()
+    })
+
     return {
       queryID: 1,
       paramID: 2
