@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>{{ data.count }}</h1>
+    <h1>count: {{ data.count }}</h1>
     <button @click="add">add</button>
   </div>
 </template>

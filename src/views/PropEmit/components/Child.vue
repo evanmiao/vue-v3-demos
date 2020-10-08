@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p>{{ data }}</p>
+    <h1>{{ data }}</h1>
     <button @click="emit">emit</button>
   </div>
 </template>
