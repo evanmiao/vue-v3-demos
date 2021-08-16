@@ -86,6 +86,11 @@ const routes = [
     }]
   },
   {
+    path: '/scriptsetup',
+    name: '<script setup>',
+    component: () => import('../views/ScriptSetup/ScriptSetup.vue')
+  },
+  {
     path: '/:catchAll(.*)',
     name: 'All',
     component: Setup
